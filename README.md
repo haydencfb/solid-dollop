@@ -1,4 +1,4 @@
-# Project-one-Card-Memory-Game
+# Solid-Dollop Memory Card Game
 
 ## The purpose of this project is to create a memory card game that allows for the user to interact with the computure in a classic memory card game. The user is given a set of cards in which they have the oportunity to flip over and find a matching pair.
 
