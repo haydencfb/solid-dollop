@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-:root { 
+:root {
     --modal-button-color: #ffd966;
     --global-text-color: #000000;
     --home-page-background-color: #505050;
@@ -22,7 +22,35 @@
 }
 
 body {
-    background-color: var(--home-page-background-color);;
+    background-color: var(--home-page-background-color);
+    ;
+}
+
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.buttonMode {
+
+    background-color: #ffd966;
+    color: #000000;
+    font-size: larger;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    align-items: center;
 }
 
 footer button {
