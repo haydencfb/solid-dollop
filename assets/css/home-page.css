@@ -1,0 +1,22 @@
+:root { 
+    --modal-button-color: #ffd966;
+    --global-text-color: #000000;
+    --home-page-background-color: #505050;
+    --gmae-page-background-color: #4c6c06;
+}
+
+body {
+    background-color: var(--home-page-background-color);;
+}
+
+footer button {
+    display: flex;
+    justify-content: center;
+}
+
+#player-stats-modal {
+    background-color: var(--modal-button-color);
+    color: var(--global-text-color);
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+}
