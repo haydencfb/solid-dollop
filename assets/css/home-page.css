@@ -1,3 +1,5 @@
+/* GLOBAL TAG AND VARIABLES */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,24 +10,17 @@
 :root {
     --modal-button-color: #ffd966;
     --global-text-color: #000000;
-    --home-page-background-color: #505050;
+    --home-page-background-color: #a5a5a5;
     --gmae-page-background-color: #4c6c06;
 }
 
-html, body {
-    height: 100%;
+
+/* ELEMENT */
+
+html,body {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-
-}
-
-.title {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-family: serif;
-    font-size: 3rem;
-    margin-top: 2rem;
 }
 
 main {
@@ -38,6 +33,23 @@ body {
     background-color: var(--home-page-background-color);
     
 }
+
+footer {
+    margin-top: auto;
+}
+
+/* CLASSES */
+
+.title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: serif;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+
 
 a:link {
     color: #000000;
@@ -55,7 +67,6 @@ a:active {
 }
 
 .buttonMode {
-
     background-color: #ffd966;
     color: #000000;
     font-size: larger;
@@ -75,12 +86,22 @@ a:active {
     font-size: 2rem;
     height: 75%;
 }
+.flex-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ID */
 
 #player-stats-modal {
     background-color: var(--modal-button-color);
     color: var(--global-text-color);
     border-radius: 5px 5px 5px 5px;
-    padding: 5px;
+    padding: 15px;
+    margin: 25px;
     
 }
 
