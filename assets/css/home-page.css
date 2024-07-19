@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 :root {
@@ -11,6 +12,12 @@
     --gmae-page-background-color: #4c6c06;
 }
 
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
 
 .title {
     text-align: center;
@@ -21,9 +28,15 @@
     margin-top: 2rem;
 }
 
+main {
+    height: 100vh;
+}
+
+
 body {
+    height: 100vh;
     background-color: var(--home-page-background-color);
-    ;
+    
 }
 
 a:link {
@@ -53,7 +66,15 @@ a:active {
     align-items: center;
 }
 
-
+.second-heading > h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: serif;
+    font-size: 2rem;
+    height: 75%;
+}
 
 #player-stats-modal {
     background-color: var(--modal-button-color);
