@@ -25,14 +25,27 @@ body {
     background-color: var(--home-page-background-color);;
 }
 
-footer button {
-    display: flex;
-    justify-content: center;
-}
+
 
 #player-stats-modal {
     background-color: var(--modal-button-color);
     color: var(--global-text-color);
     border-radius: 5px 5px 5px 5px;
     padding: 5px;
+    
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    
+}
+
+.mid-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 500px; */
+    font-size: 1.75rem;
+    margin-top: 50px;
 }
