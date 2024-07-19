@@ -41,11 +41,3 @@ footer {
     
 }
 
-.mid-text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* height: 500px; */
-    font-size: 1.75rem;
-    margin-top: 50px;
-}
