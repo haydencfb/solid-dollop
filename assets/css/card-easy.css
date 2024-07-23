@@ -13,72 +13,31 @@ h1, h2 {
 
 p {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-.actions {
-    display: flex;
-    justify-content: center;
-}
-
-.actions button {
-    background-color: #ffd966;
-    color: #000000;
-    font-size: 30px;
-    border-radius: 10px;
-
-}
-
-.grid-container {
+.game-container { 
     display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 50px;
     justify-content: center;
-    grid-gap: 16px;
-    grid-template-columns: repeat(6, 140px);
-    grid-template-rows: repeat(2, calc(140px / 2*3));
-}
+    
 
+}
 .card {
-    height: calc(140px / 2 * 3);
-    width: 140px;
-    border-radius: 10px;
-    background-color: red;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease-in-out;
-}
-
-.front-image {
-    width: 60px;
-    height: 60px;
-}
-
-.card.flipped {
-    transform: rotateY(180deg);
-}
-
-.front, .back {
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.card .front {
     background-color: #ffd966;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg);
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+    
 }
 
-.card .back {
-    background-image: url('https://via.placeholder.com/150');
-    background-position: center center;
-    background-size: cover;
-    backface-visibility: hidden;
+.card:hover {
+    transform: scale(1.07);
+    transition: transform 0.25s;
 }
 
+.game-info-container {
+    grid-column: 1 / -1;
+}
