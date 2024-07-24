@@ -25,24 +25,60 @@ p {
     
 
 }
-.card {
-    background-color: #ffd966;
-    height: 260px;
-    width: 200px;
-    border-radius: 10px;
-    
-}
-
-.card:hover {
-    transform: scale(1.07);
-    transition: transform 0.25s;
-    cursor: pointer
-}
 
 .game-info-container {
     grid-column: 1 / -1;
     
 }
+
+
+/* ##CSS For The Cards */
+
+.card {
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: scale(1.07);
+    transition: transform 0.25s;
+    cursor: pointer;
+  }
+  
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    transition: transform 500ms ease-in-out;
+  }
+  
+  .card-front {
+    transform: rotateY(180deg);
+  }
+  
+  /* .card:hover needs to be changed to .card.visible when we add Javascript */
+
+  .card:hover .card-back {
+    transform: rotateY(-180deg);
+  }
+  
+  /* .card:hover needs to be changed to .card.visible when we add Javascript */
+
+  .card:hover .card-front {
+    transform: rotateY(0deg);
+  }
+
+/* ------------------- */
+
+
 
 .backBtn {
     background-color: #ffd966;
