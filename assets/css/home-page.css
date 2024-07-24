@@ -116,7 +116,6 @@ margin-bottom: 75px;
     height: 100%;
     overflow: auto;
     font-weight: bold;
-    background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.3);
   }
   
@@ -126,8 +125,7 @@ margin-bottom: 75px;
     border: 1px solid #000;
     width: 50%;
     height: 100%;
-    
-  }
+    }
   
   .close {
     color: #000;
@@ -145,6 +143,7 @@ margin-bottom: 75px;
 
 
 /* ID */
+
 
 #player-stats-modal {
     background-color: var(--modal-button-color);
