@@ -1,8 +1,8 @@
 body {
-    min-width: 100vw;
     min-height: 100vh;
     background-color: #007008;
     color: white;
+    overflow-x: hidden;
 }
 
 h1, h2 {
@@ -20,14 +20,14 @@ p {
 .game-container { 
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 50px;
+    grid-gap: 20px;
     justify-content: center;
     
 
 }
 .card {
     background-color: #ffd966;
-    height: 275px;
+    height: 260px;
     width: 200px;
     border-radius: 10px;
     
@@ -36,8 +36,22 @@ p {
 .card:hover {
     transform: scale(1.07);
     transition: transform 0.25s;
+    cursor: pointer
 }
 
 .game-info-container {
     grid-column: 1 / -1;
+    
+}
+
+.backBtn {
+    background-color: #ffd966;
+    color: #000000;
+    font-size: larger;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
 }
