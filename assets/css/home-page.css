@@ -76,6 +76,12 @@ a:active {
     padding: 10px;
     align-items: center;
     cursor: pointer;
+    transform: scale(3);
+}
+
+.buttonMode:hover {
+    transform: scale(3.03);
+    transition: transform 0.2s;
 }
 
 .second-heading {
