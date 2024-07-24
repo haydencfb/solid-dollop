@@ -30,7 +30,9 @@ main {
 
 body {
     height: 100vh;
-    background-color: var(--home-page-background-color);
+    background-image: url("https://static.vecteezy.com/system/resources/previews/032/404/517/non_2x/green-background-with-card-playing-suits-gamble-velvet-texture-poker-table-decoration-with-gambling-and-bets-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
@@ -67,8 +69,9 @@ a:active {
 }
 
 .buttonMode {
-    background-color: #ffd966;
-    color: #000000;
+    background-color: black;
+    color: whitesmoke;
+    border-color: whitesmoke;
     font-size: larger;
     font-weight: bold;
     margin: 5px;
@@ -146,8 +149,9 @@ margin-bottom: 75px;
 
 
 #player-stats-modal {
-    background-color: var(--modal-button-color);
-    color: var(--global-text-color);
+    background-color: black;
+    color: whitesmoke;
+    border-color: whitesmoke;
     border-radius: 5px 5px 5px 5px;
     padding: 15px;
     margin: 25px;

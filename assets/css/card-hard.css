@@ -1,9 +1,12 @@
 body {
     min-height: 100vh;
-    background-color: #007008;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/032/404/517/non_2x/green-background-with-card-playing-suits-gamble-velvet-texture-poker-table-decoration-with-gambling-and-bets-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     overflow-x: hidden;
-}
+  }
+  
 
 h1, h2 {
     text-align: center;
@@ -81,8 +84,9 @@ p {
 
 
 .backBtn {
-    background-color: #ffd966;
-    color: #000000;
+    background-color: black;
+    color: whitesmoke;
+    border-color: whitesmoke;
     font-size: larger;
     font-weight: bold;
     margin: 5px;
