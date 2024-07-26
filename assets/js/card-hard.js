@@ -14,6 +14,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
+    // Array Randomizer
+    const cardArrayHard = [0, 1, 2, 3, 4, 5];
+
+    const shuffle = (array) => { 
+    for (let i =0; i< cardArrayHard.length; i++) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+    }; 
+    const shuffledArrayHard = shuffle(cardArrayHard);
+
+    console.log(shuffledArrayHard);
+
    // Check for match
     function checkForMatch(cards) {
         var card1Image = cards[0].querySelector('.card-front img').src;
