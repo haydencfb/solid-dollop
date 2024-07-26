@@ -67,7 +67,7 @@ p {
 
 /* .card:hover needs to be changed to .card.visible when we add Javascript */
 
-.card.card.flipped .card-back {
+.card.flipped .card-back {
   transform: rotateY(-180deg);
 }
 
