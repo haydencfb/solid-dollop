@@ -17,7 +17,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    // Check for match
+    // Array Randomizer
+    const cardArrayMedium = [0, 1, 2, 3];
+
+    const shuffle = (array) => { 
+    for (let i =0; i< cardArrayMedium.length; i++) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+    }; 
+    const shuffledArrayMedium = shuffle(cardArrayMedium);
+
+    console.log(shuffledArrayMedium);
+
+   // Check for match
     function checkForMatch(cards) {
         var card1Image = cards[0].querySelector('.card-front img').src;
         var card2Image = cards[1].querySelector('.card-front img').src;

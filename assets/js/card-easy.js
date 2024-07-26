@@ -17,6 +17,37 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
+// Array Randomizer
+const cardArrayEasy = [
+    'assets/images/ace_of_hearts.png',
+    'assets/images/ace_of_spades.png',
+    'assets/images/ace_of_clubs.png',
+    'assets/images/ace_of_hearts.png',
+    'assets/images/ace_of_spades.png',
+    'assets/images/ace_of_clubs.png',
+];
+
+const shuffle = (array) => { 
+    for (let i = 0; i < array.length; i++) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+}; 
+
+const shuffledArrayEasy = shuffle(cardArrayEasy);
+
+const cardFronts = document.getElementsByClassName('card-front');
+
+Array.from(cardFronts).forEach((cardFront, index) => {
+    if (index < shuffledArrayEasy.length) {
+        const img = document.createElement('img');
+        console.log(shuffledArrayEasy[index]);
+        img.src = shuffledArrayEasy[index];
+        cardFront.appendChild(img);
+    }
+});
+
     // Check for match
     function checkForMatch(cards) {
         var card1Image = cards[0].querySelector('.card-front img').src;
