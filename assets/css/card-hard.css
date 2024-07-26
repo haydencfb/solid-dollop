@@ -69,13 +69,13 @@ p {
   
   /* .card:hover needs to be changed to .card.visible when we add Javascript */
 
-  .card:hover .card-back {
+  .card.flipped .card-back {
     transform: rotateY(-180deg);
   }
   
   /* .card:hover needs to be changed to .card.visible when we add Javascript */
 
-  .card:hover .card-front {
+  .card.flipped .card-front {
     transform: rotateY(0deg);
   }
 
