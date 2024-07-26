@@ -47,8 +47,9 @@ footer {
     display: flex;
     justify-content: center;
     font-family: serif;
-    font-size: 3rem;
+    font-size: 4rem;
     margin-top: 2rem;
+    color: whitesmoke;
 }
 
 
@@ -89,6 +90,7 @@ a:active {
 
 .second-heading {
 margin-bottom: 75px;
+color: whitesmoke;
 }
 
 .second-heading > h2 {
@@ -123,7 +125,7 @@ margin-bottom: 75px;
   }
   
   .modal-content {
-    background-color: #ffd966;
+    background-color: antiquewhite;
     padding: 20px;
     border: 1px solid #000;
     width: 50%;
@@ -143,6 +145,8 @@ margin-bottom: 75px;
     text-decoration: none;
     cursor: pointer;
   }
+
+
 
 
 /* ID */
