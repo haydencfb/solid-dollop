@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.log('Congratulations! You win!');
             setTimeout(() => {
                 alert('Congratulations! You win!');
+                clearInterval(timerInterval);
             }, 500);
         }
     }
@@ -92,7 +93,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 var minLabel = document.getElementById("min");
 var secLabel = document.getElementById("sec");
 var totalSec = 0;
-setInterval(setTime, 1000);
+var timerInterval;
+timerInterval = setInterval(setTime, 1000);
 
 function setTime() {
     ++totalSec;
