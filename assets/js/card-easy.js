@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (card1Image === card2Image) {
             console.log('Cards match!');
             canClick = true;
+            // numberOfPairs++;
         } else {
             console.log('Cards do not match!');
             setTimeout(() => {
@@ -70,8 +71,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         if (document.querySelectorAll('.flipped').length === cardArrayEasy.length) {
             console.log('Congratulations! You win!');
+            // completionCount++;
             setTimeout(() => {
                 alert('Congratulations! You win!');
+                if (confirm('Play again?')) {
+                    window.location.reload();
+                    console.log('Game restarted');
+                } else {
+                    window.location.href = 'home-page.html';
+                }
                 clearInterval(timerInterval);
             }, 500);
         }

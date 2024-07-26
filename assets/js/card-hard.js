@@ -84,6 +84,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.log('Congratulations! You win!');
             setTimeout(() => {
                 alert('Congratulations! You win!');
+                if (confirm('Play again?')) {
+                    window.location.reload();
+                    console.log('Game restarted');
+                } else {
+                    window.location.href = 'home-page.html';
+                }
                 clearInterval(timerInterval);
             }, 500);
         }
