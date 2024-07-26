@@ -2,24 +2,22 @@
 
 ## The purpose of this project is to create a memory card game that allows for the user to interact with the computure in a classic memory card game. The user is given a set of cards in which they have the oportunity to flip over and find a matching pair.
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
 - What was your motivation? The motivation of this project is to help understand and attribute concepts learned from the course and apply them to a real life scenario.
   
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.") We wanted to build this project to have a unique project that allowed us to practice HTML, CSS, and JavaScipt properties that we have exercised through up to this point.
   
 - What problem does it solve? The problem solved from this project was the lack of games that have been developed using local storage.
   
-- What did you learn? TBD
+- What did you learn? During the development of this game, one of the biggest impacts made onto our knowledge was the use of github in a real world setting, collaborating with other developers on the same project, in and out of zoom calls. Furthermore, this project challenged our html, css, and javascript skills up to this point, and allowed us to learn how all the concepts we have learned can be used in unison to achieve the purpose of game development. 
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Features](#features)
+- [Tests](#tests)
 
 ## Installation
 
@@ -39,31 +37,20 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 List your collaborators, if any, with links to their GitHub profiles.
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+- Hayden Fitzpatrick-Brintle: https://github.com/haydencfb
 
-If you followed tutorials, include links to those here as well.
+- Isaiah Skidmore: https://github.com/IsaiahSkidmore
+
+- Robert Rodriguez: https://github.com/R-byte01
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+MIT License
 
 ## Features
 
 If your project has a lot of features, list them here.
 
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
 ## Tests
 
