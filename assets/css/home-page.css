@@ -30,7 +30,7 @@ main {
 
 body {
     height: 100vh;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/032/404/517/non_2x/green-background-with-card-playing-suits-gamble-velvet-texture-poker-table-decoration-with-gambling-and-bets-vector.jpg");
+    background-image: url(../images/green-background-with-card-playing-suits-gamble-velvet-texture-poker-table-decoration-with-gambling-and-bets-vector.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
