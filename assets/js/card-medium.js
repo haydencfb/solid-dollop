@@ -18,18 +18,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Array Randomizer
-    const cardArrayMedium = [0, 1, 2, 3];
+    const cardArrayMedium = [
+    'assets/images/ace_of_hearts.png',
+    'assets/images/ace_of_hearts.png',
+
+    'assets/images/ace_of_spades.png',
+    'assets/images/ace_of_spades.png',
+
+    'assets/images/king_of_spades.png',
+    'assets/images/king_of_spades.png',
+
+    'assets/images/king_of_clubs.png',
+    'assets/images/king_of_clubs.png',
+    ];
 
     const shuffle = (array) => { 
-    for (let i =0; i< cardArrayMedium.length; i++) { 
+    for (let i = 0; i < array.length; i++) { 
         const j = Math.floor(Math.random() * (i + 1)); 
         [array[i], array[j]] = [array[j], array[i]]; 
     } 
     return array; 
     }; 
+
     const shuffledArrayMedium = shuffle(cardArrayMedium);
 
-    console.log(shuffledArrayMedium);
+    const cardFronts = document.getElementsByClassName('card-front');
+
+    Array.from(cardFronts).forEach((cardFront, index) => {
+    if (index < shuffledArrayMedium.length) {
+        const img = document.createElement('img');
+        console.log(shuffledArrayMedium[index]);
+        img.src = shuffledArrayMedium[index];
+        cardFront.appendChild(img);
+    }
+    });
 
    // Check for match
     function checkForMatch(cards) {

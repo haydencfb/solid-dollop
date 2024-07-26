@@ -17,19 +17,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    // Array Randomizer
-    const cardArrayHard = [0, 1, 2, 3, 4, 5];
+     // Array Randomizer
+     const cardArrayHard = [
+        'assets/images/ace_of_hearts.png',
+        'assets/images/ace_of_hearts.png',
+    
+        'assets/images/ace_of_spades.png',
+        'assets/images/ace_of_spades.png',
 
-    const shuffle = (array) => { 
-    for (let i =0; i< cardArrayHard.length; i++) { 
-        const j = Math.floor(Math.random() * (i + 1)); 
-        [array[i], array[j]] = [array[j], array[i]]; 
-    } 
-    return array; 
-    }; 
-    const shuffledArrayHard = shuffle(cardArrayHard);
+        'assets/images/ace_of_diamond.png',
+        'assets/images/ace_of_diamond.png',
+    
+        'assets/images/king_of_spades.png',
+        'assets/images/king_of_spades.png',
+    
+        'assets/images/king_of_clubs.png',
+        'assets/images/king_of_clubs.png',
 
-    console.log(shuffledArrayHard);
+        'assets/images/king_of_hearts.png',
+        'assets/images/king_of_hearts.png',
+        ];
+    
+        const shuffle = (array) => { 
+        for (let i = 0; i < array.length; i++) { 
+            const j = Math.floor(Math.random() * (i + 1)); 
+            [array[i], array[j]] = [array[j], array[i]]; 
+        } 
+        return array; 
+        }; 
+    
+        const shuffledArrayHard = shuffle(cardArrayHard);
+    
+        const cardFronts = document.getElementsByClassName('card-front');
+    
+        Array.from(cardFronts).forEach((cardFront, index) => {
+        if (index < shuffledArrayHard.length) {
+            const img = document.createElement('img');
+            console.log(shuffledArrayHard[index]);
+            img.src = shuffledArrayHard[index];
+            cardFront.appendChild(img);
+        }
+    });
 
    // Check for match
     function checkForMatch(cards) {
