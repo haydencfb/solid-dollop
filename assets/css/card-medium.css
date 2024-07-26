@@ -20,6 +20,15 @@ p {
     font-weight: bold;
 }
 
+label{
+  font-size: 60px;
+
+}
+
+.timer{
+  text-align: center;
+}
+
 .game-container { 
     display: grid;
     grid-template-columns: repeat(4, auto);
