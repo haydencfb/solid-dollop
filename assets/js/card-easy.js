@@ -1,3 +1,5 @@
+
+// Game Logic
 document.addEventListener('DOMContentLoaded', (event) => {
     var cards = document.querySelectorAll('.card');
     var flippedCards = [];
@@ -17,35 +19,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-// Array Randomizer
-const cardArrayEasy = [
-    'assets/images/ace_of_hearts.png',
-    'assets/images/ace_of_spades.png',
-    'assets/images/ace_of_clubs.png',
-    'assets/images/ace_of_hearts.png',
-    'assets/images/ace_of_spades.png',
-    'assets/images/ace_of_clubs.png',
-];
+    // Array Randomizer
+    const cardArrayEasy = [
+        'assets/images/ace_of_hearts.png',
+        'assets/images/ace_of_spades.png',
+        'assets/images/ace_of_clubs.png',
+        'assets/images/ace_of_hearts.png',
+        'assets/images/ace_of_spades.png',
+        'assets/images/ace_of_clubs.png',
+    ];
 
-const shuffle = (array) => { 
-    for (let i = 0; i < array.length; i++) { 
-        const j = Math.floor(Math.random() * (i + 1)); 
-        [array[i], array[j]] = [array[j], array[i]]; 
-    } 
-    return array; 
-}; 
+    const shuffle = (array) => { 
+        for (let i = 0; i < array.length; i++) { 
+            const j = Math.floor(Math.random() * (i + 1)); 
+            [array[i], array[j]] = [array[j], array[i]]; 
+        } 
+        return array; 
+    }; 
 
-const shuffledArrayEasy = shuffle(cardArrayEasy);
+    const shuffledArrayEasy = shuffle(cardArrayEasy);
 
-const cardFronts = document.getElementsByClassName('card-front');
+    // Assign images to cards
+    const cardFronts = document.getElementsByClassName('card-front');
 
-Array.from(cardFronts).forEach((cardFront, index) => {
-    if (index < shuffledArrayEasy.length) {
-        const img = document.createElement('img');
-        console.log(shuffledArrayEasy[index]);
-        img.src = shuffledArrayEasy[index];
-        cardFront.appendChild(img);
-    }
+    Array.from(cardFronts).forEach((cardFront, index) => {
+        if (index < shuffledArrayEasy.length) {
+            const img = document.createElement('img');
+            console.log(shuffledArrayEasy[index]);
+            img.src = shuffledArrayEasy[index];
+            cardFront.appendChild(img);
+        }
 });
 
     // Check for match
@@ -56,7 +59,6 @@ Array.from(cardFronts).forEach((cardFront, index) => {
         if (card1Image === card2Image) {
             console.log('Cards match!');
             canClick = true;
-            
         } else {
             console.log('Cards do not match!');
             setTimeout(() => {
@@ -64,10 +66,19 @@ Array.from(cardFronts).forEach((cardFront, index) => {
                 cards[1].classList.remove('flipped');
                 canClick = true;
             }, 1250);
+        } 
+
+        if (document.querySelectorAll('.flipped').length === cardArrayEasy.length) {
+            console.log('Congratulations! You win!');
+            setTimeout(() => {
+                alert('Congratulations! You win!');
+            }, 500);
         }
     }
 });
 
+
+// Timer
 var minLabel = document.getElementById("min");
 var secLabel = document.getElementById("sec");
 var totalSec = 0;
