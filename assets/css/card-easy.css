@@ -107,3 +107,16 @@ label{
   height: 305px;
 }
 
+#player-stats-modal {
+  background-color: black;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border-radius: 5px 5px 5px 5px;
+  padding: 15px;
+  margin: 25px;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: medium;
+}
+
