@@ -1,3 +1,5 @@
+
+// Game Logic
 document.addEventListener('DOMContentLoaded', (event) => {
     var cards = document.querySelectorAll('.card');
     var flippedCards = [];
@@ -48,6 +50,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
         const shuffledArrayHard = shuffle(cardArrayHard);
     
+        // Assign images to cards
         const cardFronts = document.getElementsByClassName('card-front');
     
         Array.from(cardFronts).forEach((cardFront, index) => {
@@ -76,13 +79,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 canClick = true;
             }, 1250);
         }
+
+        if (document.querySelectorAll('.flipped').length === cardArrayHard.length) {
+            console.log('Congratulations! You win!');
+            setTimeout(() => {
+                alert('Congratulations! You win!');
+                if (confirm('Play again?')) {
+                    window.location.reload();
+                    console.log('Game restarted');
+                } else {
+                    window.location.href = 'home-page.html';
+                }
+                clearInterval(timerInterval);
+            }, 500);
+        }
     }
 });
 
 var minLabel = document.getElementById("min");
 var secLabel = document.getElementById("sec");
 var totalSec = 0;
-setInterval(setTime, 1000);
+var timerInterval;
+timerInterval = setInterval(setTime, 1000);
 
 function setTime() {
     ++totalSec;

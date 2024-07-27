@@ -1,3 +1,5 @@
+
+// Game Logic
 document.addEventListener('DOMContentLoaded', (event) => {
     var cards = document.querySelectorAll('.card');
     var flippedCards = [];
@@ -19,17 +21,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Array Randomizer
     const cardArrayMedium = [
-    'assets/images/ace_of_hearts.png',
-    'assets/images/ace_of_hearts.png',
+        'assets/images/ace_of_hearts.png',
+        'assets/images/ace_of_hearts.png',
 
-    'assets/images/ace_of_spades.png',
-    'assets/images/ace_of_spades.png',
+        'assets/images/ace_of_spades.png',
+        'assets/images/ace_of_spades.png',
 
-    'assets/images/king_of_spades.png',
-    'assets/images/king_of_spades.png',
+        'assets/images/king_of_spades.png',
+        'assets/images/king_of_spades.png',
 
-    'assets/images/king_of_clubs.png',
-    'assets/images/king_of_clubs.png',
+        'assets/images/king_of_clubs.png',
+        'assets/images/king_of_clubs.png',
     ];
 
     const shuffle = (array) => { 
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const shuffledArrayMedium = shuffle(cardArrayMedium);
 
+    // Assign images to cards
     const cardFronts = document.getElementsByClassName('card-front');
 
     Array.from(cardFronts).forEach((cardFront, index) => {
@@ -70,13 +73,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 canClick = true;
             }, 1250);
         }
+
+        if (document.querySelectorAll('.flipped').length === cardArrayMedium.length) {
+            console.log('Congratulations! You win!');
+            setTimeout(() => {
+                alert('Congratulations! You win!');
+                if (confirm('Play again?')) {
+                    window.location.reload();
+                    console.log('Game restarted');
+                } else {
+                    window.location.href = 'home-page.html';
+                }
+                clearInterval(timerInterval);
+            }, 500);
+        }
     }
 });
 
 var minLabel = document.getElementById("min");
 var secLabel = document.getElementById("sec");
 var totalSec = 0;
-setInterval(setTime, 1000);
+var timerInterval;
+timerInterval = setInterval(setTime, 1000);
 
 function setTime() {
     ++totalSec;
