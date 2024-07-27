@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
+
      // Array Randomizer
      const cardArrayHard = [
         'assets/images/ace_of_hearts.png',
@@ -62,6 +63,48 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
+  // Function to increment score in local storage
+function incrementScore() {
+    // Get current score from local storage
+    var score = localStorage.getItem('score');
+
+    // If score is null or undefined, initialize it to 0
+    if (!score) {
+        score = 0;
+    } else {
+        // Parse score to integer since local storage stores everything as strings
+        score = parseInt(score);
+    }
+
+    // Increment score
+    score++;
+
+    // Set score back to local storage
+    localStorage.setItem('score', score);
+}
+
+// Function to increment pairsScore in local storage
+function incrementPairsScore() {
+    // Get current score from local storage
+    var pairsScore = localStorage.getItem('Pairs');
+
+    // If pairsScore is null or undefined, initialize it to 0
+    if (!pairsScore) {
+        pairsScore = 0;
+    } else {
+        // Parse Pair Score to integer since local storage stores everything as strings
+        pairsScore = parseInt(pairsScore);
+    }
+
+    // Increment score
+    pairsScore++;
+
+    // Set Pair Score back to local storage
+    localStorage.setItem('Pairs', pairsScore);
+}
+
+
+
    // Check for match
     function checkForMatch(cards) {
         var card1Image = cards[0].querySelector('.card-front img').src;
@@ -70,6 +113,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (card1Image === card2Image) {
             console.log('Cards match!');
             canClick = true;
+            incrementPairsScore();
             
         } else {
             console.log('Cards do not match!');
@@ -82,6 +126,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         if (document.querySelectorAll('.flipped').length === cardArrayHard.length) {
             console.log('Congratulations! You win!');
+            incrementScore();
             setTimeout(() => {
                 alert('Congratulations! You win!');
                 if (confirm('Play again?')) {

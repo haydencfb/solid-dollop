@@ -56,6 +56,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
     });
 
+    function incrementScore() {
+        var score = localStorage.getItem('score');
+
+        if (!score) {
+            score = 0;
+        } else {
+            score = parseInt(score);
+        }
+
+        score++
+
+        localStorage.setItem('score', score);
+    }
+
+    // Function to increment pairsScore in local storage
+function incrementPairsScore() {
+    // Get current score from local storage
+    var pairsScore = localStorage.getItem('Pairs');
+
+    // If pairsScore is null or undefined, initialize it to 0
+    if (!pairsScore) {
+        pairsScore = 0;
+    } else {
+        // Parse Pair Score to integer since local storage stores everything as strings
+        pairsScore = parseInt(pairsScore);
+    }
+
+    // Increment score
+    pairsScore++;
+
+    // Set Pair Score back to local storage
+    localStorage.setItem('Pairs', pairsScore);
+}
+
+
+
    // Check for match
     function checkForMatch(cards) {
         var card1Image = cards[0].querySelector('.card-front img').src;
@@ -63,6 +99,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         if (card1Image === card2Image) {
             console.log('Cards match!');
+            incrementPairsScore();
             canClick = true;
             
         } else {
@@ -76,6 +113,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         if (document.querySelectorAll('.flipped').length === cardArrayMedium.length) {
             console.log('Congratulations! You win!');
+            incrementScore();
             setTimeout(() => {
                 alert('Congratulations! You win!');
                 if (confirm('Play again?')) {
