@@ -128,11 +128,13 @@ color: whitesmoke;
     background-color: antiquewhite;
     padding: 20px;
     border: 1px solid #000;
-    width: 50%;
+    width: 50% !important;
     height: 100%;
     }
   
   .close {
+    display: flex;
+    justify-content: flex-end;
     color: #000;
     float: right;
     font-size: 28px;
