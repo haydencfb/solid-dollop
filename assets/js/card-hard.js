@@ -133,7 +133,7 @@ function incrementPairsScore() {
                     window.location.reload();
                     console.log('Game restarted');
                 } else {
-                    window.location.href = 'home-page.html';
+                    window.location.href = 'index.html';
                 }
                 clearInterval(timerInterval);
             }, 500);
