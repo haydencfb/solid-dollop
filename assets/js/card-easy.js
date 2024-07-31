@@ -7,10 +7,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     cards.forEach((card) => {
         card.addEventListener('click', function() {
-            if (!canClick) return;
+
+            // If canClick is false, return
+            if (!canClick) {
+                return;
+            }
+
+            // Flip the card
             card.classList.toggle('flipped');
             flippedCards.push(card);
 
+            // If there is only one flipped card, prevent clicking on the same card
+            // if (document.querySelectorAll('.flipped').length === 1) {
+            //     console.log('You cannot click on the same card!');
+            //     return;
+            // }
+
+            // If there are already two flipped cards, check for match
             if (flippedCards.length === 2) {
                 canClick = false;
                 checkForMatch(flippedCards);
@@ -29,6 +42,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         'assets/images/ace_of_clubs.png',
     ];
 
+    // Shuffle the array
     const shuffle = (array) => { 
         for (let i = 0; i < array.length; i++) { 
             const j = Math.floor(Math.random() * (i + 1)); 
@@ -96,6 +110,7 @@ function incrementPairsScore() {
 
     // Check for match
     function checkForMatch(cards) {
+
         var card1Image = cards[0].querySelector('.card-front img').src;
         var card2Image = cards[1].querySelector('.card-front img').src;
 
