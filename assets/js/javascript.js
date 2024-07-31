@@ -19,18 +19,6 @@ span.onclick = function() {
     console.log("modal closed");
   }
 
-// Local Storage for the modal
-// let completionCount;
-// let numberOfPairs;
-// let recentFinishTime;
-// let fastestFinishTime;
-
-
-// localStorage.setItem("Completions", completionCount);
-// localStorage.setItem("Number of Pairs", numberOfPairs);
-// localStorage.setItem("Recent Finish Time", "recentFinishTime");
-// localStorage.setItem("Fastest Finish TIme", "fastestFinishTime");
-
 // Pulling current stats from local storage
 var score = localStorage.getItem('score');
 
