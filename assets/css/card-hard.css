@@ -34,13 +34,10 @@ label{
     grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
     justify-content: center;
-    
-
 }
 
 .game-info-container {
     grid-column: 1 / -1;
-    
 }
 
 
@@ -103,4 +100,26 @@ label{
     padding: 10px;
     align-items: center;
     cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .game-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 576px) {
+  .game-container {
+    .card {
+      height: 200px;
+      width: 150px;
+    }
+  }
 }
